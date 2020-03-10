@@ -2,10 +2,10 @@ function tongHaiSo(a, b){
     var c;
     if(a === b){
         c = (a + b)*3
-        console.log(c)
+        return c
     }else{
         c = a + b 
-        console.log(c)
+        return c
     }
 }
 
