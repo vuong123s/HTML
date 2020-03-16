@@ -9,4 +9,4 @@ function run (a, b, c){
     }
 }
 
-run(22, 22, 25)
+run(22, 22, 25);
