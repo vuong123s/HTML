@@ -8,17 +8,11 @@ function run (arr){
                 a += 1
             }
         }
-        return c.push(a)
+        if(a >= 2){
+            c.push(x)
+        } 
     })
-    for(var m = 0; m < c.length; m++){
-        if(c[m] <= 1){
-            arr.splice(c.indexOf(c[m]), 1)
-        }
-    }
-    console.log(arr)
+    console.log(c)
 }
 
-run([1, 2, 3, 1, 3])
-run([1, 2, 3, 4, 5])
-run([5, 5, 5, 5, 5])
-run([10, 9, 10, 10, 9, 8])
+run([-3,-2,-1,0,0,1,2,3])
