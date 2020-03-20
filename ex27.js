@@ -15,7 +15,6 @@ function mostWanted(data) {
     var y0 = zz.filter(function(s){
         return s !== '!'
     })
-
     var y1 = y0.filter(function(s){
         return s !== '.'
     })
@@ -25,7 +24,13 @@ function mostWanted(data) {
     var y3 = y2.filter(function(s){
         return isNaN(s) === true
     }) 
-    var y = y3.filter(function(s){
+    var y4 = y3.filter(function(s){
+        return s !== '-'
+    }) 
+    var y5 = y4.filter(function(s){
+        return s !== ','
+    }) 
+    var y = y5.filter(function(s){
         return s !== ' '
     })
 
@@ -47,13 +52,21 @@ function mostWanted(data) {
             xx++
         }
     }
-    
+
 
     if(a < xx || a === 1){
+        var p = y
+        for(var o1 = 0; o1 < z.length; o1++){
+            if(a > z[o1]){
+                p = p.filter(function(mm){
+                    return mm !== y[o1]
+                })
+            }
+        }
         for(var t = 97; t <= 122; t++){
             var v1 = 0
-            for(var k = 0; k < y.length; k++){
-                if(String.fromCharCode(t) === y[k]){
+            for(var k = 0; k < p.length; k++){
+                if(String.fromCharCode(t) === p[k]){
                     v1 = t 
                 }
             }if(v1 !== 0){
@@ -63,8 +76,8 @@ function mostWanted(data) {
         return String.fromCharCode(z1[0])
     }else{
         var b = z.indexOf(a)
-        return x[b]
+        return y[b]
     }
 }
 
-mostWanted("Lorem ipsum dolor sit amet")
+mostWanted("But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.")
