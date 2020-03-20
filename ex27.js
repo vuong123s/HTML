@@ -45,7 +45,6 @@ function mostWanted(data) {
         }
         z.push(v)
     }
-
     var a = Math.max(...z)
     for(var o = 0; o < z.length; o++){
         if(a === z[o]){
