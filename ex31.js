@@ -1,3 +1,4 @@
+
 /*
 You are given a text, which contains different english letters and punctuation symbols. You should find the most frequent letter in the text. The letter returned must be in lower case.
 While checking for the most wanted letter, casing does not matter, so for the purpose of your search, "A" == "a". Make sure you do not count punctuation symbols, digits and whitespaces, only letters.
@@ -10,31 +11,11 @@ Output: The most frequent letter in lower case as a string.
 */
 function mostWanted(data) {
     var x = data.toLowerCase()
+    var a = /\w/g
+    var y = x.match(a)
     var xx = 0 
     var zz = x.split('')
-    var y0 = zz.filter(function(s){
-        return s !== '!'
-    })
-    var y1 = y0.filter(function(s){
-        return s !== '.'
-    })
-    var y2 = y1.filter(function(s){
-        return s !== '?'
-    })
-    var y3 = y2.filter(function(s){
-        return isNaN(s) === true
-    }) 
-    var y4 = y3.filter(function(s){
-        return s !== '-'
-    }) 
-    var y5 = y4.filter(function(s){
-        return s !== ','
-    }) 
-    var y = y5.filter(function(s){
-        return s !== ' '
-    })
 
-    console.log(y)
     var z = []
     var z1 = []
     for(var i = 0; i < y.length; i++){
@@ -79,5 +60,4 @@ function mostWanted(data) {
         return y[b]
     }
 }
-
 console.log(mostWanted("But"))
