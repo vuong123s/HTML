@@ -14,7 +14,6 @@ function mostWanted(data) {
     var a = /\w/g
     var y = x.match(a)
     var xx = 0 
-    var zz = x.split('')
 
     var z = []
     var z1 = []
