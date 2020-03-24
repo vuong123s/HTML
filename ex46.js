@@ -12,9 +12,16 @@ return -1.
 */
 
 function numberRadix(str_number, radix){
-    var re
-    re.match("\A[A-Z0-9]\Z", str_number)
-    console.log(re)
+    var a = parseInt(str_number, radix)
+    var a1 = parseInt(str_number, radix + 1)
+    var a2 = parseInt(str_number, radix - 1)
+    if(isNaN(a) === true){
+        console.log(-1)
+    }else if(a1 === a || a2 === a){
+        console.log(-1)
+    }else{
+        console.log(a)
+    }
 }
 
-numberRadix("AF", 16)
+numberRadix("5A6E",9)

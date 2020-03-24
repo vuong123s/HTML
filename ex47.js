@@ -5,10 +5,8 @@ the given array.
 */
 
 function easyUnpack(elements) {
-    var x = []
-    for(var i of elements){
-        
-    }
+    var a = [elements[0], elements[2],elements[elements.length - 2]]
+    console.log(a)
 }
 
 easyUnpack([1, 2, 3, 4, 5, 6, 7, 9])
