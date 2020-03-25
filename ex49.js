@@ -26,12 +26,21 @@ function fastTrain(numbers) {
             for(var i1 of y){
                 x += i1
             }
+            if(x === i[0]){
+                console.log(y)
+            }
             var v = x + y[y.length - 1] + 1
             if(v > i[0]){
-                z--
                 if(z !== 0){
-                    y.push(z)
-                }
+                    if(i[0] - x === 1){
+                        y.push(1)
+                    }else{
+                        z--
+                        if(z !== 0){
+                            y.push(z)
+                        }
+                    }
+                } 
             }
             else{
                 z++
@@ -44,4 +53,4 @@ function fastTrain(numbers) {
     console.log(y)
 }
 
-fastTrain([[4, 2]])
+fastTrain([[9,5]])
