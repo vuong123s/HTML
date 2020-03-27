@@ -21,36 +21,9 @@ function fastTrain(numbers) {
     var x = 0
     var z = 0
     for(var i of numbers){
-        while(x < i[0]){
-            x = 0
-            for(var i1 of y){
-                x += i1
-            }
-            if(x === i[0]){
-                console.log(y)
-            }
-            var v = x + y[y.length - 1] + 1
-            if(v > i[0]){
-                if(z !== 0){
-                    if(i[0] - x === 1){
-                        y.push(1)
-                    }else{
-                        z--
-                        if(z !== 0){
-                            y.push(z)
-                        }
-                    }
-                } 
-            }
-            else{
-                z++
-                if(z !== 0){
-                    y.push(z)
-                }   
-            }
-        }
+        
     }
     console.log(y)
 }
 
-fastTrain([[9,5]])
+fastTrain([[4,2]])

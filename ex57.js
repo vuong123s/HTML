@@ -26,8 +26,24 @@ function translate(phrase){
     var b = phrase.split('')
     var c = []
     var d = []
-
-    console.log(d);
+    var e = []
+    for(var i = 0; i < b.length; i++){
+        if(VOWELS.indexOf(b[i]) === -1){
+            var x = VOWELS.indexOf(b[i+1])
+            if(b[i] === ' '){
+                c.push(b[i])
+            }else if(x !== -1){
+                c.push(b[i])
+                i++
+            }
+        }else if (VOWELS.indexOf(b[i]) !== -1){
+            if(b[i] === b[i + 1] && b[i] === b[i + 2]){
+                c.push(b[i])
+                i++ 
+                i++
+            }
+        }
+    }
+    console.log(c.join(''))
 }
-
-translate("hoooowe yyyooouuu duoooiiine") 
+translate("hieeelalaooo")
