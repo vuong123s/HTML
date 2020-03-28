@@ -17,13 +17,14 @@ You should return the minimum time (minutes) as an integer.
 */
 
 function fastTrain(numbers) {
-    var y = []
     var x = 0
-    var z = 0
+    var y = []
     for(var i of numbers){
-        
+        while(x < i[0]){    
+            console.log(x)
+            x++
+        }
     }
-    console.log(y)
 }
 
 fastTrain([[4,2]])
