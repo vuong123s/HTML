@@ -17,15 +17,30 @@ function brackets(expression){
                x === '[' || x === ']' || 
                x === '{' ||x === '}'
     })
-    var e = []
+    var e = {
+        '(' : ')',
+        '[' : ']',
+        '{' : '}'
+    }
+    var g = []
+    var f = 0
     if(d.length === 0){
         console.log(true)
+    }else if(d.length % 2 === 1){
+        console.log(false)
     }else{
         for(var i = 0; i < d.length; i++){
-            
+            if(d[i] === '(' || d[i] === '[' ||d[i] === '{'){
+                g.push(d[i])
+            }else{
+                var t = g.pop()
+                if(d[i] !== e[t]){
+                    console.log(false)
+                }
+            }
         }
+        console.log(true)
     }
-    console.log(e)
 }
 
-brackets("[(3)+(-1)]*{3}")
+brackets("((5+3)*2+1)")
