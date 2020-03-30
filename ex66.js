@@ -18,21 +18,12 @@ function subnetworks(net, crushes) {
         for(var i of net){
             for(var i2 = 0; i2 < i.length; i2++){
                 if(i1 === i[i2]){
-                    i.splice(i2,1,' ')
+                    i.splice(i2, 1)
                 }
             }
-        }
-    }
-    for(var x of net){
-        for(var x1 = 0; x1 < x.length; x1++){
-            
         }
     }
     console.log(net)
 }
 
-subnetworks ( [
-    [ 'A' , 'B' ] , 
-    [ 'B' , 'C' ] , 
-    [ 'C' , 'D' ] 
-] , [ 'C' , 'D' ] )
+subnetworks([["A","B"],["A","C"],["A","D"],["D","F"],["B","C"]],["A"])
