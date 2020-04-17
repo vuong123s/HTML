@@ -28,7 +28,7 @@ PEEK	    4,9,1	7+1=8
 
 function digitStack(commands){
     let x = []
-    let y = []
+    let y = 0
     let z = ['PUSH', 'POP', 'PEEK']
     for(let i of commands){
         for(let i1 of z){
@@ -39,25 +39,21 @@ function digitStack(commands){
                 }
                 if(i1 === 'POP'){
                     if(x.length > 0){
-                        y.push(parseInt(x[x.length-1]))
+                        y += parseInt(x[x.length-1])
                     }
-                    y.push(0)
+                    y += 0
                     x.pop()
                 }
                 if(i1 === 'PEEK'){
                     if(x.length > 0){
-                        y.push(parseInt(x[x.length-1]))
+                        y += parseInt(x[x.length-1])
                     }
-                    y.push(0)
+                    y += 0
                 }
             }
         }
     }
-    let v = 0
-    for(let i2 of y){
-        v += i2
-    }
-    console.log(v)
+    console.log(y)
 }
 
 digitStack(["PUSH 3", "POP", "POP", "PUSH 4", "PEEK", "PUSH 9", "PUSH 0", "PEEK", "POP", "PUSH 1", "PEEK"])
